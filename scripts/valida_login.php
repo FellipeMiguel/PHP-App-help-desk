@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $usuarios_autenticado = false;
 
 $usuarios_app = array(
@@ -14,6 +16,8 @@ foreach ($usuarios_app as $user) {
 
 if ($usuarios_autenticado) {
     echo 'Usuário autenticado';
+    $_SESSION['autenticado'] = 'SIM';
 } else {
+    $_SESSION['autenticado'] = 'NAO';
     header('Location: ../index.php?login=erro');
 }
