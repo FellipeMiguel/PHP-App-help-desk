@@ -5,7 +5,7 @@ require_once "../scripts/validador_acesso.php";
 <?php
 $chamados = array();
 
-$arquivo = fopen("../scripts/arquivo.hd", "r");
+$arquivo = fopen("../../../app_help_desk/arquivo.hd", "r");
 
 while (!feof($arquivo)) {
   $registro = fgets($arquivo);
